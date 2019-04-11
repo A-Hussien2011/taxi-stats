@@ -1,0 +1,5 @@
+stopped counter at 150000 record,
+total trips = 150000,
+tripsperday = 46000,
+average vehicles per day = 25,
+distinct vehicles = 20000

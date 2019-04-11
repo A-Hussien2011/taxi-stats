@@ -1,33 +1,49 @@
-.App {
-  text-align: center;
+/*fonts*/
+@font-face {
+    font-family: caviar;
+    src: url(Caviar_Dreams_Bold.ttf);
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+    font-family: josefin;
+    src: url(JosefinSlab-Regular.ttf);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@font-face {
+    font-family: questrial;
+    src: url(Questrial-Regular.otf);
+}
+
+.App div{
+  background-color: #cccccc;
+  padding: 20px;
+  margin: 20px;
+}
+.App div h1{
+  font-size: 1.5vw;
+  font-family: josefin;
+}
+.App div h6{
+  font-family: caviar;
+  font-size: 2vw;
+  margin: 10px 0 10px 0;
+}
+
+#header{
+  text-align:center;
+  font-size: 3vw;
+  font-family: questrial;
+}
+#btnSubmit{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#btnSubmit button{
+  height: 50px;
+  font-size: 15px;
+  background-color: white;
+  cursor: pointer;
+  border: 0px solid black;
+  border-radius: 1vw;
+  box-shadow: 10px 10px 5px #aaaaaa;
 }
