@@ -13,19 +13,22 @@
     font-family: questrial;
     src: url(Questrial-Regular.otf);
 }
-
-.App div{
+.App{
+  padding: 20px 5% 50px 5%;
+}
+.App .firstContainer {
   background-color: #cccccc;
   padding: 20px;
   margin: 20px;
+  display: flex;
 }
 .App div h1{
-  font-size: 1.5vw;
+  font-size: 15px;
   font-family: josefin;
 }
 .App div h6{
   font-family: caviar;
-  font-size: 2vw;
+  font-size: 25px;
   margin: 10px 0 10px 0;
 }
 
@@ -41,9 +44,34 @@
 #btnSubmit button{
   height: 50px;
   font-size: 15px;
-  background-color: white;
+  background-color: black;
   cursor: pointer;
   border: 0px solid black;
+  color: white;
   border-radius: 1vw;
   box-shadow: 10px 10px 5px #aaaaaa;
+}
+svg{
+  width: 20vw;
+  flex: 1;
+}
+.firstContainer div{
+  flex: 1;
+}
+.vehiclesPerDay div, .vehiclesNum div{
+  display: flex;
+}
+.vehiclesPerDay h1, .vehiclesNum h1{
+  flex: 1;
+  padding-left: 5vw;
+  font-size: 20px !important;
+}
+.vehiclesPerDay h6, .vehiclesNum h6{
+  flex: 1;
+}
+
+.vehiclesPerDay select, .vehiclesNum select{
+  flex: 1;
+  background-color: white;
+  border: 1px solid black;
 }

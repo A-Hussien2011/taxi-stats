@@ -9,3 +9,8 @@ In the project directory, you can run:
 Runs the app in the development mode.<br>
 Open [http://localhost:19001](http://localhost:19001) to view it in the browser.
 There is a button at the end which stop connection on the socket
+
+### `For dynamic locations IDs`
+
+Put the csv of taxi locations in the public folder and the client will read the ID
+of madison,Brooklyn and woodside,Queen
