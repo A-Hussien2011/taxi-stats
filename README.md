@@ -4,9 +4,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-###Steps to run the client side and filewriter:
+### `Steps to run the client side and filewriter:`
 
-### 1) `npm install`
+### 1) `npm install` and `npm run build`
 
 To install all the node modules associated with the client side
 
