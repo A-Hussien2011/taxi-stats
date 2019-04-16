@@ -1,26 +1,29 @@
 /*fonts*/
 @font-face {
     font-family: caviar;
-    src: url(Caviar_Dreams_Bold.ttf);
+    src: url('./assets/Caviar_Dreams_Bold.ttf');
 }
 
 @font-face {
     font-family: josefin;
-    src: url(JosefinSlab-Regular.ttf);
+    src: url('./assets/JosefinSlab-Regular.ttf');
 }
 
 @font-face {
     font-family: questrial;
-    src: url(Questrial-Regular.otf);
+    src: url('./assets/Questrial-Regular.otf');
 }
 .App{
   padding: 20px 5% 50px 5%;
+  background-image: url("./assets/background.jpg");
 }
 .App .firstContainer {
   background-color: #cccccc;
-  padding: 20px;
+  padding: 30px;
   margin: 20px;
   display: flex;
+  border-radius: 1vw;
+  box-shadow: 1px 1px 1px 1px black;
 }
 .App div h1{
   font-size: 15px;
@@ -36,20 +39,21 @@
   text-align:center;
   font-size: 3vw;
   font-family: questrial;
+  color: white;
 }
 #btnSubmit{
   display: flex;
   justify-content: center;
 }
 #btnSubmit button{
-  height: 50px;
-  font-size: 15px;
-  background-color: black;
+  height: 80px;
+  font-size: 25px;
+  background-color: white;
   cursor: pointer;
   border: 0px solid black;
-  color: white;
+  color: black;
   border-radius: 1vw;
-  box-shadow: 10px 10px 5px #aaaaaa;
+  box-shadow: 7px 8px 5px black;
 }
 svg{
   width: 20vw;
@@ -73,5 +77,6 @@ svg{
 .vehiclesPerDay select, .vehiclesNum select{
   flex: 1;
   background-color: white;
-  border: 1px solid black;
+  box-shadow: 1px 1px 1px 1px black;
+  padding: 10px;
 }

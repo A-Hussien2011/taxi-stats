@@ -88,7 +88,33 @@ class App extends Component {
         };
         ws.onmessage = (event) => {
             this.processData(JSON.parse(event.data));
+            this.writeFile();
         }
+    }
+
+    writeFile = async()=>{
+        let {numTrips, numRecords, totalTrips, vehiclesPerDay, cars, pickedFromWoodside} = this.state;
+        let availableDays = Object.keys(vehiclesPerDay).length;
+        let tripsPerDay = Math.floor((totalTrips.yellow + totalTrips.green + totalTrips.yellow) / availableDays);
+        let distinctCars = Object.keys(cars).length;
+        let woodside = pickedFromWoodside.yellow + pickedFromWoodside.green + pickedFromWoodside.fhv;
+
+        if(!tripsPerDay) tripsPerDay = 0;
+
+        let response = await fetch('http://localhost:3000/writeresults', {
+            method: 'POST',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                numRecords,
+                numTrips,
+                tripsPerDay,
+                distinctCars,
+                woodside
+            })
+        });
     }
 
     getAllLocations =(data)=>{
@@ -307,9 +333,9 @@ class App extends Component {
                 <div className="firstContainer minutesPerTrip">
                     <div>
                         <h6>Average trip time in minutes</h6>
-                        <h1>Yellow average trip time: {tripsDuration.yellow / totalTrips.yellow}</h1>
-                        <h1>Green average trip time: {tripsDuration.green / totalTrips.green}</h1>
-                        <h1>FHV average trip time: {tripsDuration.fhv / totalTrips.fhv}</h1>
+                        <h1>Yellow average trip time: {Math.floor(tripsDuration.yellow / totalTrips.yellow)}</h1>
+                        <h1>Green average trip time: {Math.floor(tripsDuration.green / totalTrips.green)}</h1>
+                        <h1>FHV average trip time: {Math.floor(tripsDuration.fhv / totalTrips.fhv)}</h1>
                     </div>
                     <ReactSvgPieChart expandOnHover={true} expandSize={5}
                         data={dataAverageTime} strokeWidth={0}
